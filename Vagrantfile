@@ -6,10 +6,9 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.10.100"
   config.hostsupdater.aliases = ["eng42.local"]
 
-  # Synced app folder
-  config.vm.synced_folder "node-sample-app", "/app"
+
 
   # provisioning bash script
-  config.vm.provision "shell", path: "environment/provision.sh"
+  config.vm.provision "shell", path: "environment/automation.sh"
 
 end
